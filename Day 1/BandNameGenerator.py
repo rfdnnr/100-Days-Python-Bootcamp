@@ -1,0 +1,6 @@
+print("Welcome to my Band Name Generator program, by Rafael Donner!")
+print("What's the name of a city you like/grew up in?")
+city = input()
+print("What's your pet's name?")
+name = input()
+print ("Your band name could be: " + city + " " + name)
