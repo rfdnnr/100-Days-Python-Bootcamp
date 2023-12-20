@@ -1,0 +1,52 @@
+print('''        .
+      .                    |~~             .
+                  .     ___|___      .
+                       ((((())))
+          .           (((((()))))         .
+                    |-------------|
+              +    I_I_I_I_I_I_I_I_I    +
+             (()   |---------------|   (()
+            |---|  ||-| |-| |-| |-||  |---|
+  _________|-----|_|---------------|_|-----|_________
+  I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_I_I_I|I_I_I_I_I_I_I_|
+  |-------|------|-------------------|------|-------|
+  ||-| |-||  |-| ||-| |-| |-| |-| |-|| |-|  ||-| |-||
+((|-------|------|-------------------|------|-------|))
+()|  |_|  |  |_| |::::: ------- :::::| |_|  |  |_|  |()
+))|  |_|  |  |_| | |_| |_.-"-._| |_| | |_|  |  |_|  |((
+()|-------|------| |_| | | | | | |_| |------|-------|()
+@@@@@@@@@@@@@@@@@|-----|_|_|_|_|-----|@@@@@@@@@@@@@@@@@
+    ^           @@@@/=============\@@@@
+                       /       \
+''')
+
+print("Welcome to the Spy Game, by Rafael Donner!\nYour mission is to gather classified documents from your enemy base.")
+
+
+
+
+
+
+Entrance = input("It is not safe to enter by the main entrance.\nTo get inside sneaking through the service door, type 'door'.\nTo get inside through the second floor window, type 'window'.\n").lower()
+if Entrance == "window":
+    print("You have managed to climb to the second floor window, now you are inside a room.")
+    
+    Inside = input("Once inside, you must head to the underground bunker, but you see a guard in your way.\nIf you want to fight him, type 'fight'.\nIf you want to wait for him to leave, type 'wait'.\n").lower()
+    if Inside == "fight":
+        print("You courageously fought the guard and stole his clothes, now you can walk around unnoticed.")
+        
+        Final = input("When you've gotten inside the bunker, you noticed a strange beep sound. After opening the documents, you see a bomb. It was a trap!\nNow you must be quick, cut the right wire or the bomb will explode!\nTo cut the blue wire, type 'blue'. To cut the yellow wire, type 'yellow'. To cut the red wire, type 'red'.\n").lower()
+        if Final == "blue":
+            print("You cut the right wire, got the documents and completed you mission!")
+        elif Final == "yellow" or Final == "red":
+            print("The bomb exploded.")
+        else:
+            print("Wrong prompt.")
+    elif Inside == "wait":
+        print("The guard stood still for a long time, then went for a quick nap inside the room you were in. He saw you and alerted everyone.")
+    else:
+        print("Wrong prompt.")
+elif Entrance == "door":
+    print("You tried to sneak into the service door, but there were many guards chatting around there. They saw you and your cover was blown.")
+else:
+    print("Wrong prompt.")
